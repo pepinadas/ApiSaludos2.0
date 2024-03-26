@@ -1,0 +1,286 @@
+{
+	"info": {
+		"_postman_id": "86b8f079-b26b-4f9f-8236-0a439fce9818",
+		"name": "Api Saludos 2.0",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21448634"
+	},
+	"item": [
+		{
+			"name": "Bienvenida con autenticacion",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyY2pSc0Mzb2s0MmJKR0hxaGRZcXJKc29Dd24iLCJleHAiOjE3MDg3OTYwMzV9.AwdFd8f1CjveDGgVdvy1OMifBT3uScbXvUGfOt8uns8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8079/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8079",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"mmmunapregunta@gmail.com\",\r\n    \"password\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8079/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8079",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Loguearte / Obtener Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"mmmunapregunta@gmail.com\",\r\n    \"password\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8079/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8079",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Info Usuario",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyY2pSc0Mzb2s0MmJKR0hxaGRZcXJKc29Dd24iLCJleHAiOjE3MDg3OTYwMzV9.AwdFd8f1CjveDGgVdvy1OMifBT3uScbXvUGfOt8uns8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8079/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8079",
+					"path": [
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener todos saludos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyY2pSc0Mzb2s0MmJKR0hxaGRZcXJKc29Dd24iLCJleHAiOjE3MDg3OTYwMzV9.AwdFd8f1CjveDGgVdvy1OMifBT3uScbXvUGfOt8uns8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8079/greets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8079",
+					"path": [
+						"greets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inspeccionar saludo especifico por Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyY2pSc0Mzb2s0MmJKR0hxaGRZcXJKc29Dd24iLCJleHAiOjE3MDg3OTYwMzV9.AwdFd8f1CjveDGgVdvy1OMifBT3uScbXvUGfOt8uns8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"greet_content\": \"Hola Mundo\",\r\n    \"lenguage\": \"Spanish\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8079/greet/2cjaMkUh0f11oqnF6qA5dU5JrIy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8079",
+					"path": [
+						"greet",
+						"2cjaMkUh0f11oqnF6qA5dU5JrIy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Guardar nuevo saludo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyY2pSc0Mzb2s0MmJKR0hxaGRZcXJKc29Dd24iLCJleHAiOjE3MDg3OTYwMzV9.AwdFd8f1CjveDGgVdvy1OMifBT3uScbXvUGfOt8uns8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"greet_content\": \"Hola Yael\",\r\n    \"lenguage\": \"Spanish\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8079/greet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8079",
+					"path": [
+						"greet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar saludo por Id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyY2pSc0Mzb2s0MmJKR0hxaGRZcXJKc29Dd24iLCJleHAiOjE3MDg3OTYwMzV9.AwdFd8f1CjveDGgVdvy1OMifBT3uScbXvUGfOt8uns8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"greet_content\": \"Hola Mundo\",\r\n    \"lenguage\": \"Spanish\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8079/greet/2cjaMkUh0f11oqnF6qA5dU5JrIy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8079",
+					"path": [
+						"greet",
+						"2cjaMkUh0f11oqnF6qA5dU5JrIy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar mensaje con Id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyY2pSc0Mzb2s0MmJKR0hxaGRZcXJKc29Dd24iLCJleHAiOjE3MDg3OTYwMzV9.AwdFd8f1CjveDGgVdvy1OMifBT3uScbXvUGfOt8uns8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8079/greet/2cjaMkUh0f11oqnF6qA5dU5JrIy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8079",
+					"path": [
+						"greet",
+						"2cjaMkUh0f11oqnF6qA5dU5JrIy"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
